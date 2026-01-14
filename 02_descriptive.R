@@ -6,7 +6,7 @@
 library(tableone)
 
 # Load processed data
-data <- read.csv("data/processed/data_imputed_scaled.csv")
+data <- read.csv("data/processed/data_scaled.csv")
 
 # ---- Create table for baseline characteristics ----
 Tab1.stas <- CreateTableOne(vars = colnames(data), strata = "group", data = data, factorVars = c("group", "sex", "diab", "hyper"), test = TRUE, smd = TRUE, addOverall = TRUE)
